@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nexa, prototipo académico de un sistema distribuido de recomendación de productos." />
+    <title>Nexa · Recomendaciones distribuidas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Nexa, ir al inicio">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>Nexa<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#sistema">El sistema</a>
+        <a href="#arquitectura">Arquitectura</a>
+        <a href="#recomendaciones">Demo</a>
+      </nav>
+      <a class="header-cta" href="#recomendaciones">Probar demo <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero section-shell">
+        <div class="hero-copy reveal">
+          <h1>Recomendaciones que <em>se mueven</em> contigo.</h1>
+          <p class="hero-intro">Nexa conecta una interfaz, una API, un motor de recomendaciones y una base de datos para convertir preferencias en decisiones útiles.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#recomendaciones">Explorar productos <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#arquitectura">Ver cómo funciona <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-meta">
+            <span><strong>04</strong> componentes</span>
+            <span><strong>01</strong> experiencia</span>
+            <span><strong>REST</strong> comunicación</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal" aria-label="Visualización abstracta de la red de recomendaciones">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <div class="network-card">
+            <div class="network-card-top"><span>LIVE SYSTEM MAP</span><span class="live-pill">ONLINE</span></div>
+            <div class="network-graph">
+              <span class="graph-line line-a"></span>
+              <span class="graph-line line-b"></span>
+              <span class="graph-line line-c"></span>
+              <span class="graph-line line-d"></span>
+              <span class="graph-node node-ui">UI</span>
+              <span class="graph-node node-api">API</span>
+              <span class="graph-node node-engine">AI</span>
+              <span class="graph-node node-db">DB</span>
+            </div>
+            <div class="network-card-bottom"><span>response time</span><strong>42 ms</strong></div>
+          </div>
+          <p class="visual-caption">Una arquitectura distribuida,<br /><strong>explicada visualmente.</strong></p>
+        </div>
+      </section>
+
+      <section id="sistema" class="story-section section-shell">
+        <div class="section-label reveal"><span>01</span><span>La idea</span></div>
+        <div class="story-grid">
+          <div class="story-heading reveal">
+            <h2>Una aplicación, <span>varios servicios.</span></h2>
+          </div>
+          <div class="story-body reveal">
+            <p>Un sistema distribuido divide una solución en componentes independientes que colaboran a través de una red. Cada parte tiene una responsabilidad clara, pero el usuario percibe una sola experiencia.</p>
+            <div class="principle-list">
+              <div><span class="principle-number">01</span><p><strong>Separación</strong><br />Cada servicio resuelve una tarea específica.</p></div>
+              <div><span class="principle-number">02</span><p><strong>Comunicación</strong><br />Los servicios intercambian datos mediante HTTP y REST.</p></div>
+              <div><span class="principle-number">03</span><p><strong>Escalabilidad</strong><br />Los componentes pueden crecer de forma independiente.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="arquitectura" class="architecture-section">
+        <div class="section-shell">
+          <div class="section-label light reveal"><span>02</span><span>La arquitectura</span></div>
+          <div class="architecture-heading reveal">
+            <h2>Del clic a la<br /><em>recomendación.</em></h2>
+            <p>El recorrido de una preferencia del usuario a través de la red.</p>
+          </div>
+          <div class="architecture-flow reveal">
+            <article class="service-card active-service">
+              <span class="service-index">01</span>
+              <div class="service-icon">⌁</div>
+              <h3>Interfaz</h3>
+              <p>Captura búsquedas y preferencias del usuario.</p>
+              <span class="service-tech">HTML · CSS · JS</span>
+            </article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="service-card">
+              <span class="service-index">02</span>
+              <div class="service-icon">↔</div>
+              <h3>API REST</h3>
+              <p>Recibe solicitudes y coordina los servicios.</p>
+              <span class="service-tech">HTTP · JSON</span>
+            </article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="service-card">
+              <span class="service-index">03</span>
+              <div class="service-icon">✦</div>
+              <h3>Recomendador</h3>
+              <p>Analiza afinidades y calcula resultados.</p>
+              <span class="service-tech">Python · Algoritmo</span>
+            </article>
+            <span class="flow-arrow" aria-hidden="true">→</span>
+            <article class="service-card">
+              <span class="service-index">04</span>
+              <div class="service-icon">▦</div>
+              <h3>Base de datos</h3>
+              <p>Persiste productos, usuarios y preferencias.</p>
+              <span class="service-tech">SQLite · SQL</span>
+            </article>
+          </div>
+          <div class="architecture-note reveal"><span>REQUEST FLOW</span><p>Una solicitud viaja entre componentes; cada servicio responde con datos estructurados.</p></div>
+        </div>
+      </section>
+
+      <section id="recomendaciones" class="demo-section section-shell">
+        <div class="section-label reveal"><span>03</span><span>La experiencia</span></div>
+        <div class="demo-heading reveal">
+          <div><h2>Encuentra tu<br /><em>siguiente favorito.</em></h2></div>
+          <p>Selecciona una categoría para simular una consulta a la API y observar cómo el motor construye tus recomendaciones.</p>
+        </div>
+        <div class="filter-row reveal" role="group" aria-label="Categorías de productos">
+          <button class="filter-button is-selected" data-category="Todos">Todos</button>
+          <button class="filter-button" data-category="Tecnología">Tecnología</button>
+          <button class="filter-button" data-category="Hogar">Hogar</button>
+          <button class="filter-button" data-category="Movilidad">Movilidad</button>
+        </div>
+        <div class="product-grid reveal" id="product-grid"></div>
+        <div class="api-feedback" aria-live="polite"><span class="pulse"></span><span id="feedback-text">API lista · esperando una preferencia</span></div>
+      </section>
+
+      <section class="insights-section section-shell">
+        <div class="insight-card reveal">
+          <p class="eyebrow">Lo que demuestra</p>
+          <h2>Diseñar distribuido es pensar en conexiones.</h2>
+          <p>La solución evidencia interfaz, persistencia, comunicación entre componentes y una lógica de negocio que puede desplegarse de manera independiente.</p>
+          <a class="button button-dark" href="#conclusiones">Ver conclusiones <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="metrics-panel reveal">
+          <div><strong>+32%</strong><span>capacidad de escalar servicios</span></div>
+          <div><strong>04</strong><span>responsabilidades separadas</span></div>
+          <div><strong>REST</strong><span>protocolo de comunicación</span></div>
+        </div>
+      </section>
+
+      <section id="conclusiones" class="conclusions-section section-shell">
+        <div class="section-label reveal"><span>04</span><span>Conclusiones</span></div>
+        <div class="conclusion-grid">
+          <div class="reveal"><h2>Más flexible.<br /><span>Más preparado.</span></h2></div>
+          <div class="reveal">
+            <p>Separar la aplicación en servicios permite que cada componente evolucione sin detener todo el sistema. A cambio, aparecen retos de latencia, monitoreo y sincronización que deben gestionarse.</p>
+            <div class="pros-cons"><div><strong>+</strong><span>Escalabilidad y mantenimiento independiente.</span></div><div><strong>−</strong><span>Mayor complejidad de red y diagnóstico.</span></div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">N</span><span>Nexa<span class="brand-dot">.</span></span></div>
+      <p>Actividad 7 · Diseño e implementación de un sistema distribuido</p>
+      <span>2026</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
